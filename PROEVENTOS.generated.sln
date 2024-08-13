@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{48779CDF-A4A3-4CC7-AB66-CF6A5DFEE55F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{8D37DA6F-6529-47FE-97D5-FAC6AB108538}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{377D1865-32C0-4D76-B5D6-70C6D76998CF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9DD2205-433D-40FD-ACE5-176759261FAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProEventos.API", "Back\src\ProEventos.API\ProEventos.API.csproj", "{AF77C9DA-BB39-42C2-873E-A19FC9287E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProEventos.API", "Back\src\ProEventos.API\ProEventos.API.csproj", "{6FBC3870-1547-41A3-A48F-BE313F49052A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AF77C9DA-BB39-42C2-873E-A19FC9287E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF77C9DA-BB39-42C2-873E-A19FC9287E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF77C9DA-BB39-42C2-873E-A19FC9287E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF77C9DA-BB39-42C2-873E-A19FC9287E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FBC3870-1547-41A3-A48F-BE313F49052A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FBC3870-1547-41A3-A48F-BE313F49052A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FBC3870-1547-41A3-A48F-BE313F49052A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FBC3870-1547-41A3-A48F-BE313F49052A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{377D1865-32C0-4D76-B5D6-70C6D76998CF} = {48779CDF-A4A3-4CC7-AB66-CF6A5DFEE55F}
-		{AF77C9DA-BB39-42C2-873E-A19FC9287E62} = {377D1865-32C0-4D76-B5D6-70C6D76998CF}
+		{A9DD2205-433D-40FD-ACE5-176759261FAD} = {8D37DA6F-6529-47FE-97D5-FAC6AB108538}
+		{6FBC3870-1547-41A3-A48F-BE313F49052A} = {A9DD2205-433D-40FD-ACE5-176759261FAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE9A1714-7856-4562-A41B-1DE3A4186B0C}
