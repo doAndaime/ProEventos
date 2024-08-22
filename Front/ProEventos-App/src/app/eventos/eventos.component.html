@@ -55,7 +55,7 @@
     </tr>
   </tbody>
   <tfoot>
-    <tr *ngIf="!eventos.length"> <!--Só aparece se existirem eventos-->
+    <tr *ngIf="!filteredEvents.any"> <!--Só aparece se existirem eventos-->
       <td colspan="8" class="text-center">
         <h4>Nenhum evento encontrado!</h4>
       </td>

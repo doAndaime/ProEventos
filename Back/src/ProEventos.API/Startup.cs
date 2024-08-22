@@ -1,18 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ProEventos.API.Data;
 using Microsoft.EntityFrameworkCore;
+using ProEventos.Persistence.Contexts;
+using ProEventos.Application.Contratos;
+using ProEventos.Application;
+using ProEventos.Persistence.Contratos;
+using ProEventos.Persistence;
 
 namespace ProEventos.API
 {
@@ -28,10 +25,22 @@ namespace ProEventos.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<ProEventosContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson(
+                        x => x.SerializerSettings.ReferenceLoopHandling = 
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                    );// Este 'add' previne o ciclo infinito de objetos
+
+            // Sempre que for 'chamado' o IEventosService é ejetado o EventosService
+            services.AddScoped<IEventosService, EventoService>();
+            // Sempre que for 'chamado' o IGeralPersist é ejetado o GeralPersistence
+            services.AddScoped<IGeralPersist, GeralPersistence>();
+            // Sempre que for 'chamado' o IEventosPersist é ejetado o EventoPersistence
+            services.AddScoped<IEventosPersist, EventoPersistence>();
+
             services.AddCors();// Obrigatório para permissões de acesso à API, em conjunto com a declaração da linha 58
             services.AddSwaggerGen(c =>
             {
